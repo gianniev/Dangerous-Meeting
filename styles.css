@@ -1,0 +1,613 @@
+header {
+    background-color: #111010; /* Color de fondo */
+    padding: 10px 15px; /* Epaciado interno */
+    display: flex; /* Flexbox  para alinear elementos*/
+    justify-content: space-between; /* Alinea los elementos a los extremos */
+    align-items: center; /* Alinea los elementos verticalmente */
+    overflow: visible;
+    flex-wrap: wrap; /* Permite que el nav baje en móviles *
+}
+
+
+.logo {
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    margin-left: -20px; /* Espaciado a la izquierda */;
+} 
+
+.logo-img {
+    width: 250px; /* Tamaño fijo para el logo */
+    height: auto; /* Altura automática, mantiene las proporciones */
+    margin-right: 800px; /* Espaciado a la derecha */
+    vertical-align: middle; /* alinea con el nav si es necesario */
+    
+}
+
+.logo-img:hover {
+    transform: scale(1.1);
+}
+ 
+
+nav ul {
+    list-style: none;
+    margin: o;
+    padding: 0;
+    display: flex; /* Flexbox  para alinear elementos*/
+    flex-direction: row;
+    gap: 10px; /* Reducido para móviles */
+}
+  /*
+nav ul li {
+   quitamos el margin left porque usamos gap en el contenedor
+} */
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-family:  arial, sans-serif;
+    font-size: 16px;
+    padding: 5px 5px;
+    margin-right: 5px;
+    transition:  0.3s;  
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Burger menu (oculto por defecto en pantallas grandes) */
+.burger-menu {
+    display: none; /* oculto en escritorio */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.burger-menu .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: all 0.3s ease; 
+
+}
+
+
+body {
+    background-color: #111010; /* Color de fondo */
+    margin: 0;
+    padding: 0;
+    
+}
+
+/* Estilos para la sección con imagen y texto */ 
+.hero {
+    position: relative; /* para posicionar el texto sobre la imgen */
+    width: 100%;
+    height:  auto; /*Altura fija*/
+}
+
+.hero p {
+    text-align: center;
+}
+
+.hero-image{ 
+    width: 100%; /* Ocupa todo el ancho */
+    height: 100%; /* Se ajusta a la altura del contenedor */
+    object-fit: cover; /* Cubre el área sin distorsionarse */
+    display: block; /* Evita espacios debajo de la imagen */
+}
+
+.hero-text{
+    position: absolute; /* Posiciona el texto sobre la imagen */
+    top: 50%; /* Lo coloca en la mitad superior */
+    left: 50%; /* Lo coloca en la mitad izquierda */
+    transform: translate(-50%, -50%); /* Lo centra */
+    color: white;
+    text-align: center; 
+    font-family:  Arial, sans-serif;
+  /*   background-color: rgba(0, 0, 0, 0.5); Fondo semitransparente  font-size: 24px;*/
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    width: 90%; /* Limita el ancho en móviles */
+}
+
+ /* checkpoint */
+
+.hero-text h1{
+    margin:0 ;
+    font-size: 48px;
+}
+
+.hero-text p{
+    margin: 10px 0 0;
+    font-size: 32px;
+}
+
+/* Estilos generales para todos los párrafos */
+p {
+    font-size: 18px;
+    line-height: 1.5; /* Espacio entre líneas (1.5 veces el tamaño de la fuente) */
+    margin: 0 0 15px 0; /* 15px de espacio debajo de cada párrafo */
+    text-align: left; 
+}
+
+/* Estilos para la sección de contenidos */
+main {
+    max-width: 1200px; /* Limita el ancho máximo para mejor legibilidad */
+    margin: 0 auto; /* Centra el contenido */
+    padding: 20px; /* Espaciado interno */
+}
+
+.content-section {
+    display: flex; /* Alinea imagen y texto horizontalmente */
+    align-items: center; /* Alinea verticalmente */
+    margin-bottom: 40px; /*espaciado entresecciones */  
+    color: white;
+    flex-wrap: wrap; /* Ajusta al ancho del contenedor */
+
+}
+
+.content-section p {
+    line-height: 1.6;  /* Espacio entre líneas (1.6 veces el tamaño de la fuente) */
+    margin-bottom: 20px; 
+
+}
+
+.content-section h1 {
+    text-align: center;
+
+}
+.section-image{
+    width: 150px; /* tamaño fijo para la imagen */
+    height: 150px;
+    margin-right: 20px; /* Espaciado entre imagen y texto */
+}
+
+.section-text h2{
+    font-size: 24px;
+    margin: 0 0 10px 0; /* Espacio debajo del titulo */
+}
+
+.sextion-text p{
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Estilos par la galeria */
+.gallery {
+    text-align: center; /* Alinea los elementos al centro */
+    margin-top: 40px;
+    color: white;
+}
+
+.gallery-container{
+    position: relative;
+    max-width: 100%;  /* Ancho fijo para mostrar una imagen a la vez */
+    margin: 0 auto;
+    overflow-x: hidden; /* Oculta el contenido que se sale del contenedor */
+    overflow-y: hidden; /* Oculta el contenido que se sale del contenedor */
+    white-space: nowrap; /* Evita saltos de línea */
+}
+.gallery h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+ 
+
+.gallery-images {
+    display: flex;
+    transition: transform 0.5s ease; /* Animación suave al mover */
+}
+
+
+.gallery-image{
+    width: 400px; /* Ocupa todo el ancho */
+    height: 300px; /* Altura fija */
+    flex-shrink: 0; /* No se encoge */
+    object-fit: cover; /* Ajusta la imagen al tamaño sin distorsionarla */
+}
+
+.prev-btn, .next-btn {
+   /* transform: translateY(-50%);    */
+    background-color: rgba(0, 0, 0, 0.833);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin: 10px 20px; /* espacio arriba y a los lados */
+    display: inline-block; /* Alinea los elementos en línea */
+    font-size: 20px; 
+}
+
+/*.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+*/
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Sección videos de youtube */
+
+.videos {
+    color: white;
+    text-align: center;
+    margin: 40px 0px;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre videos */
+    flex-wrap: wrap; /* Ajusta los videos al ancho del contenedor */
+}
+
+
+/* Contacto Inicio */
+
+.contact {
+    text-align: center;
+    color: white;
+    padding: 20px;
+    margin-left: 50px;
+}
+
+.contact p{
+    text-align: center;
+}
+
+/* Barra horizontal <hr> */
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: white;
+    margin: 20px 0; 
+    width: 80%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* social link */ 
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    width:30px; /* tamaño fijo para icono */
+    height: 30px;
+    margin: 0 10px; 
+    vertical-align: middle; /* Alinea verticalmente */
+    transition: transform 0.3s; /* Animación al pasar el mouse */
+}
+
+ 
+.social-icon:hover{
+    transform: scale(1.1); /* Agrandar al pasar el mouse */
+}
+
+
+/* Pop up */ 
+
+.popup {
+    display: none; /* Oculto por defecto */
+    position: fixed;  /* Fijo en la ventana */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrado */
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000; /* Por encima de todo */
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.popup-content p {
+    font-size: 16px;
+    margin: 0  0 15px  0;
+
+}
+
+.close-popup {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.close-popup:hover {
+    background-color: #45a049;
+}
+
+.popup.active {
+    display: block; /* Visible cuando está activo */
+}
+
+body.popup-active::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+
+/* Estilos para el footer */
+.footer {
+    background-color : #111010;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-content{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.footer-content p {   
+    text-align: center;
+    font-size: 12px;
+}
+ 
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre enlaces */
+}
+
+.footer-links li a {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+}
+
+.footer-links li a:hover {
+    text-decoration: underline;
+}
+
+.footer a {
+    color: #4CAF50;
+}
+
+.footer a:hover {
+    color: #45a049;
+}
+
+/* Fuente (font-family) */
+@font-face {
+    font-family: 'metalfuente';
+    src: url('fonts/BelionRadego-zrO73.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Servicios - página */
+
+.servicios-hero {
+    color: white;
+    text-align: center;
+    margin: 40px 0;
+    
+}
+
+.servicios-hero h2 {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.servicios-hero p{
+    font-size: 20px;
+    margin: 0;
+    text-align: center;
+    padding: 5px;
+
+}
+
+
+/* Nosotros - página */
+.nosotros-hero {
+    color: white;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.nosotros-hero h2 {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.nosotros-hero p {
+    font-size: 20px;
+    margin: 0;
+    text-align: center;
+    padding: 5px;
+}
+/* Media Queries para móviles */
+@media (max-width: 768px) {
+    /* Header */
+    header {
+        padding: 5px 10px;
+        flex-direction: column; /* Apila logo y nav */
+    }
+
+    .logo-img {
+        width: 160px; /* Más pequeño en móviles */
+        margin: 0 auto; /* Centrado */
+    }
+
+    /* menu and burger menu*/
+
+    .burger-menu {
+        display: block; /* visible para móviles */
+    }
+
+    .nav-menu {
+        background-color: #3330;
+        height: 100vh;
+        width: 100%;
+        max-width: 100%;
+        position: fixed;
+        top: 0; 
+        display: none; /* oculto en móviles */
+       /* flex-direction: column;        */
+        justify-content: center;
+        transition: .3s ease;       
+        padding: 10px 0;     
+    }
+
+    .nav-menu a {
+        color: #4CAF50;
+        font-weight: bold;
+        font-size: 18px;
+        background-color: #333;
+    }
+
+    .nav-menu.active {
+        display: block; /* visible en móviles */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-list {
+        display: flex;
+        justify-content: center; 
+        gap: 15px;
+        flex-wrap: wrap; /* Ajusta al ancho del contenedor */
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .nav-list li {
+        margin: 0;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    /* Animación de la hamburguesa */
+    .burger-menu.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger-menu.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .burger-menu.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* Hero */
+    .hero-text h1 {
+        font-size: 24px; /* Reducido */
+    }
+
+    .hero-text p {
+        font-size: 14px;
+    }
+
+    p {
+        font-size: 14px; /* Más pequeño en móviles */
+        line-height: 1.4;
+        margin-bottom: 10px;
+    }
+
+    .section-text p {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+
+    .footer p {
+        font-size: 12px;
+    }
+
+    /* Contenido */
+    .content-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section-image {
+        margin: 0 auto 10px;
+    }
+
+    /* Galería */
+    .gallery-image {
+        width: 150px; /* Aún más pequeño */
+        height: 100px;
+    }
+
+    /* Videos */
+    .video-container iframe {
+        max-width: 100%;
+        width: 300px; /* Tamaño más pequeño para móviles */
+    }
+
+
+    /* Contacto */
+    .contact {
+        margin-left: 0;
+
+    }
+
+    /* Footer */
+    .contact-info {
+        text-align: center;
+    }
+
+    .social-links {
+        margin: 10px auto;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+
